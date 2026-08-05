@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bases de données | Wassim RAJI</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div id="progress-bar"></div>
+
+<header>
+
+<nav>
+
+<div class="logo">
+
+<img src="../img/photocv.png" alt="Photo de profil" class="logo-photo">
+
+WASSIM RAJI
+
+</div>
+
+<ul>
+
+<li><a href="../index.html">Accueil</a></li>
+
+<li><a href="../presentation.html">Présentation</a></li>
+
+                <li class="dropdown">
+                    <a href="../competences.html" class="active">Compétences</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-heading">Techniques</li>
+                        <li><a href="/competences/conception-developpement.html">Conception et développement</a></li>
+                        <li><a href="/competences/pilotage-technique-application.html">Pilotage technique d'application</a></li>
+                        <li><a href="/competences/administration-securite.html">Administration et sécurité</a></li>
+                        <li><a href="/competences/automatisation.html">Automatisation</a></li>
+                        <li><a href="/competences/base-de-donnees.html">Bases de données</a></li>
+                        <li class="dropdown-heading">Humaines</li>
+                        <li><a href="/competences/communication.html">Communication</a></li>
+                        <li><a href="/competences/organisation.html">Organisation</a></li>
+                        <li><a href="/competences/travail-equipe.html">Travail d'équipe</a></li>
+                        <li><a href="/competences/autonomie.html">Autonomie</a></li>
+                        <li><a href="/competences/resolution-problemes.html">Résolution de problèmes</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="/realisations.html">Réalisations</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/realisations/projet-pmt.html">Projet PMT</a></li>
+                            <li><a href="/realisations/pictopicto.html">Picto Picto</a></li>
+                            <li><a href="/realisations/projet-migration.html">Projet de migration d'application</a></li>
+                            <li><a href="/realisations/projet-automatisation-vip-waf.html">Automatisation déploiement de loadbalancer et WAF</a></li>
+                            <li><a href="/realisations/projet-mco-equipement-secu.html">MCO Equipements de sécurité</a></li>
+                        </ul>
+                </li>
+
+<li><a href="../parcours.html">Parcours</a></li>
+
+<li><a href="../contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="fiche-hero">
+
+    <div class="container">
+
+        <a href="../competences.html" class="back-link">← Retour aux compétences</a>
+
+        <span class="section-tag">Compétence technique</span>
+
+        <h1>Bases de données</h1>
+
+    </div>
+
+</section>
+
+<section class="fiche-section">
+
+    <div class="container">
+
+        <h2>Ma définition</h2>
+
+        <p>
+            Les bases de données sont un ensemble structuré de données stocké de maniere persistente, cela permet de conserver des informations
+            importantes lié au bon fonctionnement d'une application.
+
+        </p>
+
+        <p>
+
+            De nos jours on distingue deux grand modèle de gestion de données : Les bases de données relationnelles <strong>SQL</strong> et les bases de données non relationnelles dites <strong>NoSQL</strong> (Not Only SQL).
+            Les bases de données relationnelles SQL reposent sur un système de table interconnectés entre elle avec des schéma strict garantissant l'intégrité des données durant les transactions, de l'autre côté les bases de données non relationnelles
+            NoSQL fonctionnent avec un système bien plus flexible et modulable, les données peuvent être stocker sous forme de JSON, de fichier clé valeur ou de graphe, le NoSQL favorise la scalabilité horizontale de l'architecture.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="fiche-section">
+
+    <div class="container">
+
+        <h2>Mes éléments de preuve</h2>
+
+        <div class="anecdote-card">
+            <p>
+
+                Pendant le développement du projet PMT, j'ai du conceptualisé et développer l'entiereté de la base de données relationnelles SQL de l'outil,
+                à partir de use cases et d'un MLD (Modele Logique de Données) définis en amont.
+
+            </p>
+            <a href="../realisations/projet-pmt.html">→ Voir le projet PMT</a>
+        </div>
+
+        <div class="anecdote-card">
+            <p>
+
+                Durant le developpement du module d'automatisation de déploiement de VIP et de WAF, j'ai créer des structures de données relationnelles solide car dans le cadre d'un projet
+                d'automatisation comme celui ci, il est nécessaire de créer un format templatisé des données attendus <strong>pour</strong> les équipements et des données retournées <strong>par</strong> les équipements,
+                dans le but final d'avoir un apercu global de chaque déploiement.
+
+            </p>
+            <a href="../realisations/projet-automatisation-vip-waf.html">→ Voir le projet d'automatisation</a>
+        </div>
+
+        <div class="anecdote-card">
+            <p>
+
+                Lors de la refonte de l'application Picto Picto, j'ai pu refondre la structure des tables déjà présentes en proposant un schéma bien plus complet de ce qui etait attendu en amont par le client,
+                par exemple, j'ai ameliorer la structure d'une table d'utilisateur en y stockant des mots de passe haché et leur salt pour chaque user.
+
+            </p>
+            <a href="../realisations/pictopicto.html">→ Voir le projet Picto Picto</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="fiche-section">
+
+    <div class="container">
+
+        <h2>Mon autocritique</h2>
+
+        <p>
+
+            J'éstime avoir un bon niveau de compétences dans les bases de données, aussi bien pour concevoir un modèle de structure de données que pour
+            en faire évoluer une, les bases de données font parties des premieres compétences que j'ai acquise au debut de mon parcours, je pense tout de
+            meme à évoluer sur l'optimisation et la gestion de données à plus grande echelle afin d'etre capable de mettre en place des architecture scalable.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="fiche-section">
+
+    <div class="container">
+
+        <h2>Mon évolution</h2>
+
+        <p>
+
+            Je souhaiterai approfondir mon domaine de compétences concernant les bases de données NoSQL et sur les problematiques d'optimisation à grande echelle afin de maitriser
+            la scalabilité horizontale des architectures de données.
+
+        </p>
+
+        <h3 style="margin-top:40px;margin-bottom:15px;color:white;">Réalisations liées à cette compétence</h3>
+
+        <div class="realisations-liees">
+            <a href="../realisations/projet-pmt.html">Projet PMT</a>
+            <a href="../realisations/pictopicto.html">Projet Picto Picto</a>
+            <a href="../realisations/projet-automatisation-vip-waf.html">Projet automatisation déploiement VIP et WAF</a>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+© 2026 Wassim RAJI
+
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+
+</html>

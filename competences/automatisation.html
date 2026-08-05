@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Automatisation | Wassim RAJI</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div id="progress-bar"></div>
+
+<header>
+
+<nav>
+
+<div class="logo">
+
+<img src="../img/photocv.png" alt="Photo de profil" class="logo-photo">
+
+WASSIM RAJI
+
+</div>
+
+<ul>
+
+<li><a href="../index.html">Accueil</a></li>
+
+<li><a href="../presentation.html">Présentation</a></li>
+
+                <li class="dropdown">
+                    <a href="../competences.html" class="active">Compétences</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-heading">Techniques</li>
+                        <li><a href="/competences/conception-developpement.html">Conception et développement</a></li>
+                        <li><a href="/competences/pilotage-technique-application.html">Pilotage technique d'application</a></li>
+                        <li><a href="/competences/administration-securite.html">Administration et sécurité</a></li>
+                        <li><a href="/competences/automatisation.html">Automatisation</a></li>
+                        <li><a href="/competences/base-de-donnees.html">Bases de données</a></li>
+                        <li class="dropdown-heading">Humaines</li>
+                        <li><a href="/competences/communication.html">Communication</a></li>
+                        <li><a href="/competences/organisation.html">Organisation</a></li>
+                        <li><a href="/competences/travail-equipe.html">Travail d'équipe</a></li>
+                        <li><a href="/competences/autonomie.html">Autonomie</a></li>
+                        <li><a href="/competences/resolution-problemes.html">Résolution de problèmes</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="/realisations.html">Réalisations</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/realisations/projet-pmt.html">Projet PMT</a></li>
+                            <li><a href="/realisations/pictopicto.html">Picto Picto</a></li>
+                            <li><a href="/realisations/projet-migration.html">Projet de migration d'application</a></li>
+                            <li><a href="/realisations/projet-automatisation-vip-waf.html">Automatisation déploiement de loadbalancer et WAF</a></li>
+                            <li><a href="/realisations/projet-mco-equipement-secu.html">MCO Equipements de sécurité</a></li>
+                        </ul>
+                </li>
+
+<li><a href="../parcours.html">Parcours</a></li>
+
+<li><a href="../contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="fiche-hero">
+
+    <div class="container">
+
+        <a href="../competences.html" class="back-link">← Retour aux compétences</a>
+
+        <span class="section-tag">Compétence technique</span>
+
+        <h1>Automatisation</h1>
+
+    </div>
+
+</section>
+
+<section class="fiche-section">
+
+    <div class="container">
+
+        <h2>Ma définition</h2>
+
+        <p>
+
+            L'automatisation consiste à remplacer des actions manuelle et répétitive par le biais d'un processus
+            executé automatiquement sans intervention humaine par une machine, que ce soit pour construire et livrer une application
+            ou bien pour toutes autres taches métier, le but est de gagner du temps et limiter l'erreur humaine.
+
+
+        </p>
+
+        <p>
+            
+            Un bon sytème automatisé se distingue par la présence de vérifications des actions même si les interactions humaine
+            ont été limitées, le but derriere tout ça est de limiter la casse en etablissant des gardes fou si un problème survient, ce qui peut
+            ne pas être le cas en cas d'intervention humaine pouvant allez plus loin et provoquer bien plus de soucis.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="fiche-section">
+
+    <div class="container">
+
+        <h2>Mes éléments de preuve</h2>
+
+        <div class="anecdote-card">
+            <p>
+
+                Pendant, mon alternance j'ai pu développer un module permettant d'automatiser les déploiement de VIP (Virtual IP) sur des load balancers et des WAF (Web Application Firewall),
+                dans le but de remplacer un processus très chronophage et pénible qui se basait sur une collecte de besoin du client via un fichier Excel puis des interventions manuelles sur
+                plusieurs équipements, j'ai pu mettre à disposition un formulaire aux clients internes de l'entreprise leur permettant d'être autonome sur ce sujet. Ce projet à permis à nos équipes
+                d'admin de gagner énormement de temps et de pouvoir traiter d'autre sujet.
+
+            </p>
+            <a href="../realisations/projet-automatisation-vip-waf.html">→ Voir le projet d'automatisation</a>
+        </div>
+
+        <div class="anecdote-card">
+            <p>
+
+                Sur le projet <strong>PMT</strong>, j'ai mis en place un pipeline d'intégration et de livraison
+                continue : à chaque push de code sur GitHub, une nouvelle image Docker de l'application est
+                automatiquement construite puis poussée sur DockerHub, sans intervention manuelle de ma part.
+
+                Sur le projet PMT, j'ai du mettre en place une piple CI/CD, j'ai automatiser de sorte à ce qu'à chaque push du code
+                sur GitHub, les tests de l'application s'éxecutent, une nouvelle image Docker du projet se créer puis est poussée sans intervention manuelle
+                sur le DockerHub.
+
+            </p>
+            <a href="../realisations/projet-pmt.html">→ Voir le projet PMT</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="fiche-section">
+
+    <div class="container">
+
+        <h2>Mon autocritique</h2>
+
+        <p>
+
+
+            Mon niveau sur cette compétence est bon mais reste encore à développer, j'ai vite pris en main certain
+            outil permettant d'automatiser des taches recurrente lors de déploiement d'application, mais il en existe
+            enormement, j'aspire donc à approndir ma maitrise sur plusieurs technos différentes. 
+
+        </p>
+
+        <p>
+
+            Ce que je retiens surtout c'est que pour bien automatiser un processus personalisé, il faut s'attacher à une certaine rigueur
+            permettant d'identifier tout les potentielles cas de blocages durant l'éxécution d'une tache. Il faut anticiper les cas d'erreur, prévoir
+            des vérifications, et ne pas oublié de maintenir le code.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="fiche-section">
+
+    <div class="container">
+
+        <h2>Mon évolution</h2>
+
+        <p>
+
+            Je souhaite approndir mon panel de connaissance en terme d'automatisation, beaucoup de technos déja présente sont entrain d'évoluer
+            et j'aimerai pouvoir les maitriser afin d'avoir un apercu global de tout ce qu'il est possible de faire avec ces outils.
+
+        </p>
+
+        <h3 style="margin-top:40px;margin-bottom:15px;color:white;">Réalisations liées à cette compétence</h3>
+
+        <div class="realisations-liees">
+            <a href="../realisations/projet-automatisation-vip-waf.html">Projet Automatisation VIP WAF</a>
+            <a href="../realisations/projet-pmt.html">Projet PMT</a>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+© 2026 Wassim RAJI
+
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+
+</html>
