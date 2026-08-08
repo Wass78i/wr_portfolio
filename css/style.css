@@ -620,7 +620,7 @@ color:black;
 .hero{
     background:
         linear-gradient(135deg, rgba(8,8,8,.55), rgba(9,9,9,.65)),
-        url("/img/hero-bg.svg") center/cover no-repeat;
+        url("../img/hero-bg.svg") center/cover no-repeat;
 }
  
 

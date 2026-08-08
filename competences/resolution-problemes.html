@@ -99,6 +99,17 @@ WASSIM RAJI
 
         <h2>Ma définition</h2>
 
+        <p>
+            La résolution de problème, consite à analyser un problème survenu lors d'un bug ou un incident afin d'en identifier premierement la cause puis d'y apporter une solution
+            durable à long terme plutot que de simplement corriger le problème en facade. Cette compétence s'applique dans plein de domaine de compétence tel que le développement ou bien
+            l'administration système etc...
+        </p>
+
+        <p>
+            En entreprise, savoir résoudre des problèmes est une compétence cruciale car la plupart du temps du travail d'un développeur ou d'un admin système c'est d'identifier et résoudre
+            des problèmes.
+        </p>
+
 
     </div>
 
@@ -111,7 +122,56 @@ WASSIM RAJI
         <h2>Mes éléments de preuve</h2>
 
         <div class="anecdote-card">
-            
+            <p>
+                Pendant mon alternance, étant seul responsable de l'application sur laquelle je travaillais dedisponible pendant une période de moindre présence dû à une
+                période de congés, un incident a été créer via une plateforme de ticketing et m'a été transmis car plus aucun mails n'étaient transmis depuis l'application,
+                en effet un utilisateur ne recevait pas de mail de reinitiliasation de mot de passe après en avoir fait la demande et nous l'a remonté, j'ai pu analyser le
+                problème directement en me connectant sur les serveurs applicatif en cherchant dans des fichiers de logs d'où pouvait surevenir l'erreur, après identification
+                du soucis j'ai pu corriger un fichier de configuration et faire un retour à la personne impacté par le soucis, qui par la suite nous informera avec image à
+                l'appuie qu'il a enfin reçu son mail de reinitialisation de mot de passe et en nous remerciant.
+            </p>
+        </div>
+
+        <div class="anecdote-card">
+            <p>
+                Lors de la migration d'un serveur d'application critique en entreprise vers un environnement à jour, en commencant par la bascule du serveur de recette, 
+                j'ai réncontré des incompatibilités entre les versions de paquets et dépendances de PHP et Python nécessaire au bon fonctionnement de l'application, 
+                pour corrgier ce probleme il a fallu identifié les ecarts de versions, mettre à jour les paquets via un dépôt distant, modifier des fichiers de configuration
+                et tester le bon fonctionnement de l'application avant la migration du serveur de production.
+            </p>
+            <a href="../realisations/projet-migration.html">→ Voir le projet de migration</a>
+        </div>
+
+        <div class="anecdote-card">
+            <p>
+                Pendant la refonte du projet Picto Picto, j'ai aussi été confronté à enormement d'obsolesence côté code, ce qui m'a ordonné dans un premier temps à corrgier tout les soucis
+                de dépendance lié à la version de Symfony utilisé, ensuite des soucis de performance se faisait grandement sentir sur l'application, après analyse, je me suis rendu compte que
+                les précedent développeurs avaient mis en place une quantité astronomique d'appel de code JavaScript très volumineux à des endroits où il n'y en avait pas besoin, ce qui m'a fallut
+                de reordonner certains fichiers avec les fonctionnalités importantes et les appelé uniquement dans les cas nécessaires, à la fin le portail a retrouver des performances très fluide
+                et attendu de la part du client.
+            </p>
+            <a href="../realisations/pictopicto.html">→ Voir le projet Picto Picto</a>
+        </div>
+
+        <div class="anecdote-card">
+            <p>
+                Lors de la phase pilote du projet d'automatisation de déploiement de VIP et WAF, pendant des tests, il nous a été remonté par notre équipe exploitant le premiere version du produit, 
+                qu'il y avait des problèmes bloquants les déploiements, la reservartion d'adresse IP côté IPAM et d'interface sur les équipements n'étaient pas possible dans certains cas selon l'environnement
+                des déploiements, après analyse en se connectant sur les équipements il s'est avéré que des interfaces ont été reservé mais lié à aucune ressource, ce qui a resulter à un choix strategiquer obligatoire
+                au bon fonctionnement des déploiement automatique, il ne faut plus faire d'intervention à la main sur les équipements, le module d'automatisation se charge de le faire, une campagne de desinvetissement
+                des interfaces reservée pour rien a été lancé afin de nettoyer et sanitariser les ressources des équipements de sécurité.
+            </p>
+            <a href="../realisations/projet-automatisation-vip-waf.html">→ Voir le projet d'automatisation</a>
+        </div>
+
+        <div class="anecdote-card">
+            <p>
+                Pendant le projet PMT, lors de la mise en place de la pipeline CI/CD, j'ai été confronté à des problèmes que j'ai du analyser afin de comprendre comment les corriger,
+                par exemple, au moment de la construction de la nouvelle image Docker à chaque push sur le dépot distant de versionning de code, la partie front Angular n'était pas récupéré
+                depuis le repertoire approprié du serveur Nginx, en analysant en profondeur, j'ai compris qu'il fallait aussi intégrer un fichier de configuration propre à Nginx lui indiquant
+                la racine des fichiers statique d'Angular, finalement en y ajoutant ce fichier de configuration et en indiquant dans le DockerFile de l'utilisé, le problème était enfin résolu.
+            </p>
+            <a href="../realisations/projet-pmt.html">→ Voir le projet PMT</a>
         </div>
 
 
@@ -125,7 +185,13 @@ WASSIM RAJI
 
         <h2>Mon autocritique</h2>
 
-       
+       <p>
+            Je pense avoir un niveau confirmé sur la résolution de problème, je suis capable d'analyser un problème afin de chercher la cause d'un soucis
+            et la comprendre afin de proposer un correctif durable et non précipité, je suis toujours ammené à monter en compétences sur la resolution de
+            problème car selon la complexité d'une technologie ou d'un produit, l'identification du problème peut prendre un certains temps, notamment lorsque
+            plusieurs systèmes interagissent ensemble, dans ces cas là, la cause du problème est parfois plus compliqué à identifier.
+       </p>
+
     </div>
 
 </section>
@@ -136,10 +202,26 @@ WASSIM RAJI
 
         <h2>Mon évolution</h2>
 
-        
+        <p>
+            La résolution de problème étant une compétence cruciale dans notre domaine, j'aspire à continuer à développer ma méthode lié à cette compétence,
+            j'aimerai être capable diagnostiquer des problèmes plus rapidement lié à des incident très complexe, au fil que les incidents surviennent
+            j'aimerai intervenir sur le sujet afin de me mesurer à des problèmes bien plus ardu et monter en compétence.
+        </p>
+
+        <p>
+            Pour un débutant la résolution de problème peut faire peur parfois, surtout dans des environnement de production, cependant il ne faut pas
+            s'arreter la dessus car il y a toujours des solutions à ces problèmes et lorsque tout est bien documenté ces solutions ne sont pas très compliqué à
+            allez chercher. 
+        </p>
 
         <h3 style="margin-top:40px;margin-bottom:15px;color:white;">Réalisations liées à cette compétence</h3>
 
+        <div class="realisations-liees">
+            <a href="../realisations/projet-migration.html">Projet de migration</a>
+            <a href="../realisations/pictopicto.html">Projet Picto Picto</a>
+            <a href="../realisations/projet-automatisation-vip-waf.html">Projet d'automatisation</a>
+            <a href="../realisations/projet-pmt.html">Projet PMT</a>
+        </div>
        
     </div>
 
