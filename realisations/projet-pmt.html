@@ -57,13 +57,13 @@ WASSIM RAJI
 </li>
 
                  <li class="dropdown">
-                    <a href="../realisations.html" class="active">Réalisations</a>
+                    <a href="/realisations.html" class="active">Réalisations</a>
                         <ul class="dropdown-menu">
-                            <li><a href="../realisations/projet-pmt.html">Projet PMT</a></li>
-                            <li><a href="../realisations/pictopicto.html">Picto Picto</a></li>
-                            <li><a href="../realisations/projet-migration.html">Projet de migration d'application</a></li>
-                            <li><a href="../realisations/projet-automatisation-vip-waf.html">Automatisation déploiement de loadbalancer et WAF</a></li>
-                            <li><a href="../realisations/projet-mco-equipement-secu.html">MCO Equipements de sécurité</a></li>
+                            <li><a href="/realisations/projet-pmt.html">Projet PMT</a></li>
+                            <li><a href="/realisations/pictopicto.html">Picto Picto</a></li>
+                            <li><a href="/realisations/projet-migration.html">Projet de migration d'application</a></li>
+                            <li><a href="/realisations/projet-automatisation-vip-waf.html">Automatisation déploiement de loadbalancer et WAF</a></li>
+                            <li><a href="/realisations/projet-mco-equipement-secu.html">MCO Equipements de sécurité</a></li>
                         </ul>
                 </li>
 
@@ -87,7 +87,6 @@ WASSIM RAJI
 
         <h1>PMT — Outil de ticketing collaboratif</h1>
 
-        
     </div>
 
 </section>
@@ -98,7 +97,22 @@ WASSIM RAJI
 
         <h2>1. Présentation du projet</h2>
 
-       
+        <p>
+
+            Le projet PMT, est un outil de ticketing collaboratif similaire à Jira, c'est un projet d'étude de cas et de développement
+            que j'ai eu à réaliser à l'école, cette application permet à des équipes de créer, suivre et gérer en temps réel des tickets
+            de manière collaboratif, l'application est composé d'un frontend en Angular, d'une API REST Java Spring pour le backend, d'un serveur de mail et
+            d'une base de données relationnelles SQL.
+
+        </p>
+
+        <p>
+
+            En suivant un cahier des charges défini et strict, j'ai pu comprendre et modéliser le besoin, en passant par
+            plusieurs étapes et en maitrisant à 100% toutes les parties du projet, conception, développement, tests, déploiement,
+            industrialisation etc...
+
+        </p>
 
     </div>
 
@@ -110,7 +124,24 @@ WASSIM RAJI
 
         <h2>2. Les objectifs, le contexte, l'enjeu et les risques</h2>
 
-        
+        <p>
+
+            Ce projet est une réalisation que j'ai eu à faire dans un contexte scolaire, c'est un sujet qui m'a été donné de réaliser durant
+            ma formation d'expert en ingénierie du logiciel, le projet portait donc sur des besoins imposés et perimètre technique bien défini, couvrant
+            plusieurs domaine de compétences techniques, l'objectif était d'évaluer mes capacités à me confronter à un sujet de grande ampleur en
+            assumant plusieurs rôles en passant par la conception, le développement du frontend et du backend, mettre en place des tests, industrialiser le
+            déploiement et la modélisation de la base de données.
+
+        </p>
+
+        <p>
+            L'enjeu étant avant tout de démontrer que j'étais capable d'assumer la faisabilité d'un projet dans son intégralité, c'est aussi
+            un moyen de monter en compétences sur différent sujet avec un projet concret à travers un livrable. L'un des principal risque du au fait
+            d'être seul en autonomie sur un projet de ce genre, c'est l'absence de regard extérieur critique sur mon travail, il faut être capable
+            de constamment se remettre en question au fil du projet, sans revue de code notamment il était possible de développer en prenant ou gardant
+            des mauvaises habitudes, c'est pourquoi pour pallier à ce risque il m'a été impératif de juger mes réalisations à la 3ème personne.
+
+        </p>
 
     </div>
 
@@ -122,7 +153,34 @@ WASSIM RAJI
 
         <h2>3. Les étapes — ce que j'ai fait</h2>
 
-      
+        <p>
+
+            J'ai débuté le projet par une phase de conception, j'ai modéliser les uses cases principaux qui étaient défini dans le
+            cahier des charges (création d'un ticket, assignation d'un ticket, envoi de mail lorsqu'un ticket est attribué à un utilisateur,
+            ajout de commentaire etc... ). A partir de la définition de ces uses cases j'ai pu en définir les principaux objets de l'application,
+            ce qui m'a permis de modéliser et créer la base de données à partir de cette phase de conception en amont.
+ 
+        </p>
+
+        <p>
+            J'ai ensuite commencé par le développement de l'API REST Java Spring étape par étape tout en testant chaque endpoint avec <strong>POSTMAN</strong>
+            et en intégrant des tests unitaire et d'intégration au fur et à mesure, tout en implémetant les fonctionnalités de sécurité proposé par Spring Security,
+            à la fin, toujours avec POSTMAN, j'ai cette fois ci suivi des scenario complet de use cases afin de simuler des cas où par exemple, un utilisateurs s'inscrirait
+            à la plateforme, créerait ensuite son premier projet avec un ticket et y inviterait un autre utilisateur à collaborer avec lui. Une fois la partie backend terminée 
+            j'ai développer la partie frontend en Angular, j'ai dans un premier temps commencé par agencer les pages webs avec seulement du HTML et CSS, de manière à avoir
+            un template de travail me permettant par la suite de gérer les interactions entre le front et le back.
+            
+        </p>
+
+        <p>
+
+            Pour finir, j'ai du entamer la derniere grande phase du projet qui consistait à industrialiser le produit, j'ai donc du créer deux Dockerfiles
+            pour l'application frontend ainsi que l'application backend, j'ai également intégré un fichier des configuration pour un serveur web Nginx, à la
+            suite j'ai mis en place une pipleline de CI/CD avec GitHub Actions sur chaque repository, à chaque push de code sur le depot distant d'une des deux
+            applications son image Docker est construite automatiquement sans interventions humaine puis est poussée sur DockerHub, cette chaine de déploiement
+            contient la phase d'installation des dépendances, de tests et de build.
+
+        </p>
 
     </div>
 
@@ -133,6 +191,16 @@ WASSIM RAJI
     <div class="container">
 
         <h2>4. Les acteurs — les interactions</h2>
+
+        <p>
+
+            Etant donné que ce projet a été mené en totale autonomie, j'ai du porter plusieurs casquettes, comme celle du chef de projet
+            jusqu'à celle du développeur, cette situation m'a forcer à endosser des rôles habituellement répartis entre plusieurs collaborateurs
+            en règle générale. Hormis la partie de définition des besoins faisant office d'étude de cas dans le cadre de ma formation, j'ai tout de
+            même par moi meme, tenu à avoir du recule sur mon travail de manière à ne pas sortir des bonnes pratiques de travail ainsi que d'avoir un oeil
+            sur les potentielles écarts que j'aurais pu commettre vis à vis du besoin concret.
+
+        </p>
 
 
     </div>
@@ -145,7 +213,28 @@ WASSIM RAJI
 
         <h2>5. Les résultats — pour moi, pour l'entreprise</h2>
 
-     
+        <p>
+
+            Pour ma part, ce projet a été une occasion de solidifer mes compétences et confirmer ma capacité à être capable
+            de porter un projet assez conséquent dans sa totalité en autonomie, ce projet m'a aussi permis de démontrer que
+            je suis capable d'être une ressource embauchable en entreprise sur des projets de grande envergure.
+
+        </p>
+
+        <p>
+            Vis à vis de ma formation d'expert en ingénierie logicielle, cela représente aussi un grand pas de fait vers l'obtention de
+            mon diplôme, étant donné que la réalisation est nécessaire pour valider une étude de cas obligatoire à la délivrance du titre
+            professionnel.
+        </p>
+
+        <p>
+
+            Le projet n'ayant pas été réalisé en entreprise, cela signifie qu'il n'y a pas de bénifice direct concret
+            lié à cette réalisations, cependant il pourrait avoir une valeur dans un contexte d'entreprise car il pourrait
+            permettre d'avoir un produit interne de gestion de ticket, cela pourrait permettre à l'entreprise de faire des
+            économies lié à l'achat de licence pour des produits comme Jira ou autres.
+
+        </p>
 
     </div>
 
@@ -157,7 +246,17 @@ WASSIM RAJI
 
         <h2>6. Les lendemains du projet</h2>
 
-       
+        <p>
+
+
+            A l'avenir il est possible que ce projet reste fonctionne étant donné qu'il y a une image Docker à jour sur disponible
+            sur le DockerHub, je prévois de continuer à le faire évoluer afin de m'en servir comme projet bac à sable afin de tester
+            certaines fonctionnalités et développer encore plus mes compétences en terme développement en y ajoutant de nouvelles 
+            fonctionnalités.
+
+        </p>
+
+
 
     </div>
 
@@ -169,11 +268,42 @@ WASSIM RAJI
 
         <h2>7. Mon regard critique</h2>
 
-       
+        <p>
+
+            Avec du recul, ce projet est l'un de ceux qui m'a permis le plus d'apprendre, notamment la partie industrialisation
+            avec toutes les adhérences qui y sont rattachés (Docker, configuration de serveur web Nginx, mise en place de Pipeline CI/CD),
+            c'est une compétence que je maitrisais moins bien que la partie développement au départ avec quelque bases bien sur, cependant
+            cela m'a permis de comprendre le travail d'un DevOps. Concernant le développement, après réflexion j'aurais commencé par ecrire
+            les tests dans un premier temps en faisant du TDD plutot que de les coder après, à l'avenir cela me permettra d'éviter des potentielles
+            régressions de code.
+
+        </p>
+
+        <p>
+
+            De manière plus générale, je retiens qu'il est possible d'aller au bout d'un projet complexe comme celui ci meme en étant seul
+            et en autonomie, un projet comme celui ci est faisable à condition de bien structurer son travail et de ne négliger aucune étapes,
+            en effet j'ai mis beaucoup de temps à développer les deux applications mais la partie qu'on retiendra le plus sont souvent celle qu'on
+            voit le moins, comme la partie d'industrialisation de l'application par exemple. J'ai aussi solidifier ma conviction qu'aucun sujet est
+            insurmontable, car en effet, à premiere vu du sujet de l'étude de cas concernant cette réalisation, j'ai dans un premier temps eu le 
+            sentiment que ce projet allait constituer une épreuve colossale et qu'il m'aurait fallu beaucoup de temps pour y venir à bout,
+            cependant avec les bonnes méthodes de travail et en apprenant sur le tas, j'ai compris que ce projet était plus simple de ce qu'il
+            en avait l'air.
+
+        </p>
 
         <h3 style="margin-top:40px;margin-bottom:15px;color:white;">Compétences liées à cette réalisation</h3>
 
-       
+        <div class="realisations-liees">
+            <a href="../competences/conception-developpement.html">Conception et développement</a>
+            <a href="../competences/automatisation.html">Automatisation</a>
+            <a href="../competences/base-de-donnees.html">Base de données</a>
+            <a href="../competences/administration-securite.html">Sécurité</a>
+            <a href="../competences/autonomie.html">Autonomie</a>
+            <a href="../competences/organisation.html">Organisation</a>
+            <a href="../competences/resolution-problemes.html">Résolution de problèmes</a>
+        </div>
+
     </div>
 
 </section>
