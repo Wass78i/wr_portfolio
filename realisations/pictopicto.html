@@ -98,6 +98,22 @@ WASSIM RAJI
 
         <h2>1. Présentation du projet</h2>
 
+        <p>
+            Le projet Picto Picto consiste en la refonte d'un produit déjà existant utlisé par des professionnels de santé dans le cadre de leur
+            accompagnement d'enfants ayant des troubles de la communication, l'application repose sur plusieurs fonctionnalités dont une phare,
+            un outil de communication se basant sur la méthode PECS (Système de communication par échange d'images), en effet, les enfants
+            présentant des troubles de la communication composent des phrases en séléctionnant des images representant un mot ou une idée et ensuite
+            l'application se charge de restituer une phrase construite à partir de ces images via écrit et via synthèse vocale.
+
+        </p>
+
+        <p>
+
+            Mon intervention sur le projet, n'a pas porté sur la création d'une application à proprement parler mais plutot sur une refonte gloable
+            du produit, en reprenant l'application en PHP Symfony afin d'y renforcer la sécurité et y ajouter de nouvelles fonctionnalités demandées par
+            le client, tout en respectant les règles et contraintes d'un projet gérant des données de santé.
+
+        </p>
         
 
     </div>
@@ -110,6 +126,25 @@ WASSIM RAJI
 
         <h2>2. Les objectifs, le contexte, l'enjeu et les risques</h2>
 
+        <p>
+
+            Le projet avait deux objectifs bien distincts, le premier qui avait pour but de renforcer la sécurité de l'application, car dans un premier
+            temps, l'application a été réalisé par un groupe de stagiaire débutant qui ont omis certaines bonnes pratiques et obligations dans le cadre de
+            création d'une application comme celle-ci, il a fallu refondre le système de gestion de mot de passe avec hachage et une gestion des droits d'accès
+            à differentes ressources du projet, le second objectif était d'enrichir l'outil avec de nouvelles fonctionnalités, comme l'ajout d'un module de dessin et
+            d'un système de spectrogramme de cohérence permettant d'évaluer la qualité des synthèses vocales.
+
+        </p>
+
+        <p>
+
+
+            Les enjeux dans ce projet sont important, notamment les enjeux lié à la sécurité, en effet, en traitant des données de santé concernant des enfants,
+            qui est un public vulnérable, nous sommes dans l'obligation de respecter un niveau d'exigence très elevé vis à vis de la protection des données,
+            le principal risque de ce projet était donc d'introduire des régressions sur une base de code déjà existante peu fiable, toute erreur est susceptible 
+            d'impacter des utilisateurs finaux vulnérable et fragile.
+
+        </p>
         
 
     </div>
@@ -122,7 +157,35 @@ WASSIM RAJI
 
         <h2>3. Les étapes ce que j'ai fait</h2>
 
+        <p>
+
+            Dans un premier temps j'ai commencé par mettre à jour les dépendances utilisée par PHP Symfony, ce qui m'a permis par la suite
+            de faire un audit de la sécurité déjà présente sur l'application à la demande du client, cela m'a conduit à refondre le hachage des
+            mots de passe et à revoir la gestion des rôles et d'accès aux ressources, afin de m'assurer que chaque utilisateurs accède à ses données
+            et pas celle d'un autre utilisateur ou qu'un enfant n'accède pas à une page de gestion d'administration de l'outil. Cela a aussi nécessité
+            une refonte direct de le base de données pour adapter la structure existante avec les nouveaux process de sécurité mis en place, sans oublié
+            que sans conception et modelisation du projet en amont il a fallu reconceptualiser le projet avec l'existant, une tache assez lourde lorsqu'on
+            ne connait pas l'ampleur du projet depuis sa création.
+
+        </p>
         
+        <p>
+
+            En terme de nouvelles fonctionnalités, à la demande du client j'ai mis en place un module de dessin,
+            car il souhaitait mettre à disposition un nouveau moyen de communication pour les enfants
+            autre que celui par la séléction d'images. En parallèle de ce module, j'ai aussi mis en place un système de spectogramme de cohérence pour évaluer
+            la qualité des synthèses vocales entre deux audios et traquer l'évolution des enfants dans leur manière de s'exprimer en fonction d'un audio type, pour
+            se faire j'ai du intégrer un script réalisé en Python avec la librairie Librosa pour analyser les fichiers audio et ainsi exporter une representation graphique
+            du spectrogramme de cohérence permettant ainsi de faciliter le travail des professionnels de santé.
+        </p>
+
+        <p>
+            Dans le cadre de ce projet, j'ai aussi tenu le rôle d'intermediaire entre les équipes de développement et le client, en effet, ce projet de refonte
+            est en réalité un projet parmis 3 autres (Développement d'une nouvelle version de l'outil en Angular + SPRING et d'une version mobile), pour se faire
+            nous étions au nombre de 6, nous nous sommes mis d'accord pour séparer le travail en 3 groupes tout en organisant des réunions journalieres et en restant
+            disponible si un groupe rencontrerait des soucis afin d'apporter notre aide si besoin.
+        </p>
+
 
     </div>
 
@@ -134,6 +197,20 @@ WASSIM RAJI
 
         <h2>4. Les acteurs les interactions</h2>
 
+        <p>
+            Les utilisateurs finaux de cette application sont au nombre de deux, il y a les professionnels de santé
+            (orthophonistes, éducateurs) qui accompagnent les enfants dans l'usage de l'outil et les
+            enfants eux-mêmes. Cela a demandé une attention particulière notamment lors de la definition des besoins et des contraintes d'usage,
+            un professionnel de santé n'ont rien à voir avec ceux d'un enfant ayant des troubles de la communication,
+            ce qui a orienté mes choix, notamment sur la simplicité d'usage du module de dessin et sur la fiabilité du système de synthèse vocale.
+
+        </p>
+
+        <p>
+            Du côté des équipes de développements au nombre de 6 séparés en 3 groupes de 2, chaque était responsable de la réalisation de son projet,
+            nous organisions des réunions afin d'être au courant de l'avancemement de chacun afin que je puisse faire un êtat des lieux au client lors
+            d'appel téléphonique organisé au préalable. 
+        </p>
        
     </div>
 
@@ -145,7 +222,28 @@ WASSIM RAJI
 
         <h2>5. Les résultats : pour moi, pour l'entreprise</h2>
 
-        
+        <p>
+
+            Pour moi, ce projet a été l'occasion de travailler sur de l'existant, sur un outil sensible, presentant des failles,
+            plutot que de commencer un projet à partir de rien, cela m'a demander une certaine rigueur, de manière à comprendre
+            du code sans interaction avec les développeur qui l'ont produit afin de le modifier sans casser des fonctionnalités
+            déjà existante. Ce projet m'a aussi introduit à la gestion de projet, en effet j'ai du organiser le mode de travail
+            de notre équipe de développement en plus de développer dans mon sous-groupe dédié à la refonte de l'application, j'ai
+            pu aussi élargir mon domaine de compétence notamment en faisant communiquer deux technologies différentes (PHP et Python)
+            sur un domaine qui ne m'était pas familier.
+
+        </p>
+
+        <p>
+
+            Pour le client et les utilisateurs finaux, cette refonte a permis d'obtenir une application bien plus sécurisée qu'elle ne l'était,
+            avec des controle d'accès robuste, une gestion des données fiable et un système de hachage de mot de passe à jour, cela à aussi
+            permis de mettre à disposition pour les enfants ayant des troubles de la communication d'améliorer leur éxperience via l'arrivée de
+            nouveau module, en effet, on peut imaginer à terme qu'un enfant ne trouvant pas d'image correspondant au besoin qu'il souhaite exprimer
+            pourrait utiliser le module de dessin afin de faire comprendre à son tuteur ce qu'il essaye de dire et à terme ajouter une nouvelle image
+            dans le module de communication en fonction de son besoin.
+
+        </p>
 
     </div>
 
@@ -157,7 +255,24 @@ WASSIM RAJI
 
         <h2>6. Les lendemains du projet</h2>
 
-       
+       <p>
+
+            Dans le futur, le système pourrait encore être améliorer, ce projet est maintenant soutenu par la fondation,
+            Terre Plurielle de l'entreprise Bouygues Construction, en collaboration avec l'ECAM-EPMI école d'ingénieur
+            où j'ai pu travailler sur ce projet, des institus médico-educatif utilisent le produit (Alfred Binet aux Mureaux, Le Clos du Parisis
+            à Montigny-les-Cormeilles) ou encore des services d'éducation spéciale et de soins à domicile (SESSAD) dont la Boussole Bleue à Villiers-le-Bel,
+            il serait interessant à l'avenir de développer encore plus le produit et de proposer ce produit à d'autres très nombreux institut qui ne connaissent
+            certainement par encore la solution.
+
+        </p>
+
+        <p>
+
+            Aujourd'hui, cette réalisation reste l'un des projets dont je suis le plus fier,
+            en effet, de par son objectif concret, contribuer même modestement à un outil qui aide au quotidien des
+            enfants à s'exprimer ca n'a pas de prix.
+
+        </p>
 
     </div>
 
@@ -169,9 +284,39 @@ WASSIM RAJI
 
         <h2>7. Mon regard critique</h2>
 
-        
+        <p>
+
+            Travailler sur une base de code existante m'a appris une rigueur que je n'avais pas encore autant
+            expérimentée sur mes projets auparavant, chaque modification de sécurité ou de structure de base de
+            données devait être pensée en tenant compte de l'existant sans rien casser. Le lien entre PHP et
+            Python pour le spectrogramme de cohérence a également été un vrai défi technique, c'est une fonctionnalité
+            qui a été demandé par client initialement à plusieurs groupes qui ont travailler sur le projet en amont et aucun
+            n'a été capable de donner suite à cette demande, je suis content d'être allez au dela de mon domaine de compétences
+            afin de répondre à se besoin.
+
+        </p>
+
+        <p>
+
+            Avec du recul sur mon travail, je pense que j'aurai du beaucoup plus documenter les changements et les fonctionnalités du projet,
+            en effet, cela pourrait permettre à une personne ou une équipe de développeur reprennant mes réalisations de comprendre bien plus facilement et rapidement
+            ce qui a été fait, plutot que de repasser par une phase de revue de code qui peut devenir très chronophage comme j'ai pu l'experimenter, c'est désormais
+            un reflexe que je m'efforce à appliquer dans mes réalisations aujourd'hui.
+
+        </p>
 
         <h3 style="margin-top:40px;margin-bottom:15px;color:white;">Compétences liées à cette réalisation</h3>
+
+        <div class="realisations-liees">
+            <a href="../competences/conception-developpement.html">Conception et développement</a>
+            <a href="../competences/base-de-donnees.html">Base de données</a>
+            <a href="../competences/administration-securite.html">Sécurité</a>
+            <a href="../competences/autonomie.html">Autonomie</a>
+            <a href="../competences/organisation.html">Organisation</a>
+            <a href="../competences/resolution-problemes.html">Résolution de problèmes</a>
+            <a href="../competences/travail-equipe.html">Travail en équipe</a>
+            <a href="../competences/communication.html">Communication</a>
+        </div>
 
         
 
