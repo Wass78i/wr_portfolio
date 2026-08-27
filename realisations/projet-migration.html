@@ -44,7 +44,7 @@ WASSIM RAJI
 <ul class="dropdown-menu">
 <li class="dropdown-heading">Techniques</li>
 <li><a href="../competences/conception-developpement.html">Conception et développement</a></li>
-<li><a href="../competences/architecture-pilotage-technique.html">Architecture et pilotage technique</a></li>
+<li><a href="../competences/pilotage-technique-application.html">Architecture et pilotage technique</a></li>
 <li><a href="../competences/administration-securite.html">Administration et sécurité</a></li>
 <li><a href="../competences/automatisation.html">Automatisation</a></li>
 <li><a href="../competences/bases-de-donnees.html">Bases de données</a></li>
@@ -100,7 +100,20 @@ WASSIM RAJI
 
         <h2>1. Présentation du projet</h2>
 
-       
+       <p>
+
+            Ce projet de migration a consisté à migrer des serveurs applicatif en entreprise qui contenait une application utilisée par 
+            des centaines de collaborateurs ayant des fonctionnalités cruciales au bon fonctionnement des opérations internes, cette application
+            reposait jusqu'alors sur des machines sous une version de CentOs obsolète, l'objectif identifié par le pôle sécurité de l'entreprise
+            était donc de migrer cette application vers des nouveaux serveurs avec un environnement actuel et mis à jour sous RedHat.
+
+        </p>
+
+        <p>
+            Etant donné qu'il s'agissait d'une application utilisée quotidiennement par un très grand nombre de collaborateurs interne, alors il
+            était essentiel de programmé une migration sans interruption ou dysfonctionnement du système, cela aurait pu provoquer des incidents ayant
+            de gros impact direct sur l'activité des opérations de différentes équipes dans l'entreprise.
+        </p>
 
     </div>
 
@@ -112,7 +125,28 @@ WASSIM RAJI
 
         <h2>2. Les objectifs, le contexte, l'enjeu et les risques</h2>
 
-       
+       <p>
+
+            Le contexte est directement lié à une remonté de l'obsolesence des versions sur lesquelles étaient les serveurs par
+            le biais de l'équipe sécurité de l'entreprise, l'objectif est donc de décomissioner les serveurs actuels en opérant une
+            bascule propre des services vers un nouvel environnement à jour et maintenu par des packages proposé en interne, les enjeux
+            sont multiple car il faut miger l'application et garantir son bon fonctionnement après la bascule.
+
+        </p>
+
+        <p>
+
+            Les enjeux et les risques de ce projet est régit par la criticité de l'application, en effet, la continuité du service
+            est un facteur clé à prendre en considération, aucune interruption prolongée des services n'était acceptable. Un des risque
+            était de se retrouver avec des soucis de dépendances ou de versions de paquets une fois sur le nouvel environnement
+
+        </p>
+
+        <p>
+            C'est pourquoi afin de pallier à cette crainte, il a été proposé de migrer dans un premier temps les serveurs de recette, en effet,
+            ces serveurs n'étant utilisé que par notre équipe à fin de test cela ne representerait pas de soucis de programmer la bascule dans un premier
+            avec, puis d'identifier toutes étapes cruciales à ne pas oublier pour la bascule de l'environnement de production.
+        </p>
 
     </div>
 
@@ -124,7 +158,37 @@ WASSIM RAJI
 
         <h2>3. Les étapes — ce que j'ai fait</h2>
 
-       
+       <p>
+
+            J'ai commencé par auditer l'environnement CentOS existant : versions de PHP et des paquets installés,
+            configuration serveur, dépendances spécifiques utilisées par l'application. Cet audit m'a permis
+            d'identifier les écarts à anticiper avant la migration vers Red Hat.
+
+            La premiere étape a été de faire un état des lieux de l'environnement actuel sur les serveur obsolète, normalement
+            tout est documenté dans un wiki d'équipe mais il est tout de même préférable de s'assurer de la fiabilité des informations, il a donc
+            fallut récupérer la version de PHP et de ses paquets, les différents fichiers de configuration lié au serveur web, des dépendances utilisés
+            par certains module spécifique de l'application etc...
+
+        </p>
+
+        <p>
+            C'est l'identification de ces écarts avec la futur version qui va nous permettre d'anticiper les étapes à venir lors de la migration finale.
+        </p>
+
+        <p>
+
+            Ensuite, une fois tout ces éléments identifiés et sur un environnement de recette, il a fallut préparer le nouvel environnement sous Red Hat installé par une équipé dédiée,
+            en reproduisant la configuration nécessaire, j'ai du réinstaller PHP ainsi que tout ses paquets en me basant sur un nouveau dépot interne
+            gérer par une autre équipe afin de garantir la fiabilité des sources utilisées par l'application. J'ai réinstaller l'application et testé son bon fonctionnement en ajustant
+            les écarts si il y en avait (correction de chemin vers une ressources, modification de fichiers de configuration etc...).
+
+        </p>
+
+        <p>
+            Après s'être assuré que tout était operationnel sur les serveurs de recette, l'étape suivante a consisté à reproduire les mêmes opérations sur les nouveaux serveurs de production,
+            en s'assurant encore une fois que tout les services fonctionnait correctement, ensuite il a fallut programmer une date de bascule durant une période avec le moins d'activité possible
+            sur l'application, de préference en fin de journée, un autre collaborateur s'est chargé de cette derniere étape.
+        </p>
 
     </div>
 
@@ -135,6 +199,23 @@ WASSIM RAJI
     <div class="container">
 
         <h2>4. Les acteurs — les interactions</h2>
+        
+        <p>
+            Ce projet a impliqué plusieurs équipes, notamment l'équipe sécurité de l'entreprise qui a mis le doigts sur les écarts lié à la version
+            des serveurs applicatif, cette équipe est responsable de donner des directives et consignes de bonne pratique de sécurité à toutes les
+            équipes c'est pour cette raison que ce sujet à été remonté. 
+
+        </p>
+
+        <p>
+            L'équipe système a notamment participer et nous avons travailler avec eux 
+            en étroite collaboration afin qu'ils comprennent notre besoin et facilite au mieux notre projet de migration.
+        </p>
+
+        <p>
+            Enfin, au sein de notre équipe nous étions 3 collaborateurs à nous être reparti le travail, dont un référent bien plus éxperimenté pour superviser
+            la bascule dans son ensemble, cela ne nous a pas empecher d'intervenir lors d'étape critique pendant ce projet de bascule.
+        </p>
 
       
     </div>
@@ -147,6 +228,20 @@ WASSIM RAJI
 
         <h2>5. Les résultats — pour moi, pour l'entreprise</h2>
 
+        <p>
+
+            A titre personnel ce projet a été une opportunité de fortement monter en compétences sur l'administration des systèmes Linux,
+            un domaine dont j'avais des bases mais que je n'avais jamais creuser aussi loin, cela me pousse à vouloir élargir encore plus
+            mon expertise dans ce domaine.
+
+        </p>
+
+        <p>
+            Pour l'entreprise, cette migration apporte une vraie plus-value, en effet, avec un système à jour et fiable cela a permis de sortir une application
+            critique d'un environnement obsolète réduisant donc son exposition au vulnérabilités, tout en ayant eu aucun impact sur la continuité de délivrance
+            du service. Cela permet donc aussi à notre équipe, étant responsable de cette application, de pouvoir aspirer à développer de plus gros modules ayant
+            des adhérences externes et être moteur sur des projets stratégique cruciale en entreprise via cette plateforme.
+        </p>
 
     </div>
 
@@ -158,7 +253,24 @@ WASSIM RAJI
 
         <h2>6. Les lendemains du projet</h2>
 
+        <p>
+            A la suite de ce projet, l'application tourne de manière très stable sur son nouvel environnement, aucune régression
+            n'a été identifié, ce projet de migration a dans sa finalité pu servir de base pour de prochaine évolution d'infrastructure
+            afin d'envisager d'autres chantiers.
+
+        </p>
        
+        <p>
+            Cette réalisation a pu ouvrir la porte a un grand nombre de futur projet, étant donné que l'application couvre déjà un périmètre énorme
+            de technologies cela n'a que renforcé pour le mieux sa position en tant que plateforme pouvant être utilisé dans à l'avenir afin de répondre
+            à des problématique stratégique de l'entreprise, à ce jour c'est déjà le cas est des réalisations majeurs sont en cours de développement.
+        </p>
+
+
+        <p>
+            A titre personnel, la réalisation de ce projet a grandement solidifié ma maitrise du sujet et mon expertise de l'administration des système Linux,
+            si un autre projet similaire à celui-ci devrait être mis en place je pense pouvoir être une ressource capable d'être intégré au projet.
+        </p>
 
     </div>
 
@@ -170,10 +282,26 @@ WASSIM RAJI
 
         <h2>7. Mon regard critique</h2>
 
-       
+       <p>
+
+            Ce projet m'a appris l'importance et la criticité de la gestion d'une application d'entreprise utilisé par de nombreux collaborateurs,
+            chaque écart de configuration non anticipé aurait pu se traduire lors de la bascule par une interruption de service, c'est la que bien connaitre
+            son environnement et celui de sa cible devient important, la vraie maitrise d'une infrastructure c'est ce que j'aspire à être capable de pouvoir
+            maitriser, avec du recul je pense qu'en documentant beaucoup plus chaque étapes nécessaire à la bascule pourrait facilité le travail à l'avenir si
+            un projet similaire venait à voir le jour.
+
+        </p>
 
         <h3 style="margin-top:40px;margin-bottom:15px;color:white;">Compétences liées à cette réalisation</h3>
-
+        <div class="realisations-liees">
+            <a href="../competences/administration-securite.html">Administration et sécurité</a>
+            <a href="../competences/pilotage-technique-application.html">Architecture et pilotage technique</a>
+            <a href="../competences/autonomie.html">Autonomie</a>
+            <a href="../competences/organisation.html">Organisation</a>
+            <a href="../competences/resolution-problemes.html">Résolution de problèmes</a>
+            <a href="../competences/travail-equipe.html">Travail en équipe</a>
+            <a href="../competences/communication.html">Communication</a>
+        </div>
        
 
     </div>
