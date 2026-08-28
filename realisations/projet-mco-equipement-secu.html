@@ -100,7 +100,18 @@ WASSIM RAJI
 
         <h2>1. Présentation du projet</h2>
 
-       
+       <p>
+
+            Ce projet a consister à réaliser la mise en conformité opérationnelle de différents type d'équipements de sécurité en entreprise,
+            parmis ces équipements se trouvent des proxys, firewall et loadbalancers. Par soucis de confidentialité vis à vis de l'entreprise
+            je ne peux pas dévoiler les technologies et marques précises de ces équipements.
+
+        </p>
+
+        <p>
+            La mise en conformité opérationnelle consiste dès lors la réception d'un nouvel équipement, de le configurer au standard souhaiter par
+            l'architecture mise en place et s'assurer qu'il réponde bien aux besoins éxiger avant de l'envoyer en salle machine.
+        </p>
 
     </div>
 
@@ -112,7 +123,27 @@ WASSIM RAJI
 
         <h2>2. Les objectifs, le contexte, l'enjeu et les risques</h2>
 
-        
+        <p>
+
+            Ce projet avait pour but de rajouter des équipements et remplacer des équipements ayant dépasser leur date d'usage effectif vis à vis des standards 
+            opérationnels d'entreprise à respecter. L'objectif était de configurer les nouveaux équipements à l'identique de ceux déjà
+            en production.
+
+        </p>
+
+        <p>
+            L'enjeu rattaché à ce projet est directement lié à la politique de sécurité mise en place par l'entreprise, en effet,
+            en fonction des changements strategique d'architecture des changements de configuration d'équipements sont donc à prévoir,
+            certaines directives ordonnait d'ajouter des équipements afin d'avoir plus de bande passante dans le traitement de requete
+            venant de l'exterieur du système, dans l'autre cas lorsqu'un équipement venait à voir sa date d'utilisation expiré, par soucis
+            de fiabilité il devait être remplacer par un nouvel équipement neuf. L'enjeu est d'avoir un parc d'équipements complétement fiable
+            et resistant à la casse, en effet, avec des équipements neufs certains composant son ammener à durée plus longtemps. Les principaux
+            risques lié à la mise en conformité opérationnelle résidait dans le faire d'intervenir sur des configuration sensible, tout erreur
+            de réglage pouvait avoir un impact lors de la mise en production du nouvel équipement, pouvant ainsi compromettre la sécurité et disponibilité
+            des services derriere.
+
+
+        </p>
 
     </div>
 
@@ -124,7 +155,32 @@ WASSIM RAJI
 
         <h2>3. Les étapes — ce que j'ai fait</h2>
 
-      
+        <p>
+
+            J'ai commencé ce projet par un audit du besoin de configuration de chaque équipement mené étape par épata accompagné d'experts
+            référents vis à vis de chaque technologuies concernées, plutot que d'intervenir seul sur des équipements que je ne maitrise pas
+            totalement, j'ai choisi de m'appuyer au départ sur des experts internes pour comprendre le fonctionnement théorique souhaiter
+            de chaque équipement et aussi en savoir plus sur les spécificités technique souvent manquantes dans la documentation globale.
+
+        </p>
+
+        <p>
+            Cet audit de départ m'a permis d'identifier les différents services à configurer, en comptant les paramètres fondamentaux habituels
+            (DNS, NTP, SMTP etc...), j'ai par la suite pu me pencher sur des aspects plus technique lié à l'architecture et les normes d'entreprise
+            notamment en y implémentant la gestion de la journalisation de remontée de logs vers des outils de supervision, j'ai pu aussi
+            implémenter les services d'authentification et de controle d'accès à la partie d'administration des équipements, j'ai également
+            gérer la partie installation de certficats SSL.
+        </p>
+
+        <p>
+
+            Afin de gagner en autonomie sur le sujet et de ne pas dépendre uniquement des experts de chaque technologie j'ai au fur et à mesure de
+            cette réalisation adopté une démarche d'apprentissage afin de profiter de cette occasion pour monter en compétence, pour se faire j'ai
+            recherché de la documentation disponible sur le wiki d'équipe ainsi que sur les sites des constructeurs de chaque équipement. Pour finir
+            une fois les configurations realisé j'ai pu les passer en revu accompagné des experts afin d'identifier les potentiels écart avec la cible
+            souhaité, si pas de problème alors l'équipement était bon à être transmis en salle machine.
+
+        </p>
 
     </div>
 
@@ -136,7 +192,24 @@ WASSIM RAJI
 
         <h2>4. Les acteurs — les interactions</h2>
 
-       
+       <p>
+
+
+            Ce projet a impliqué les experts lié à chaque technologie de l'équipe ainsi que ma personne, étant assez proche de ces personnes
+            je n'ai pas eu de difficulté à les solicité dans le but d'obtenir des directives ou bien afin de vérifier certaines configuration.
+            Il a fallu coordonné ce projet en s'organisant à l'avance afin de plannifier si besoin des sessions ensemble afin d'en savoir plus
+            sur la cible souhaitée.
+
+        </p>
+
+        <p>
+            Une fois la cible identifié les intéractions ce sont diminué étant donné que je travaillais en autonomie sur le sujet.
+        </p>
+
+        <p>
+            A la fin de ce projet, le sujet à été transmis aux personnes responsables de gérer les demande d'urbanisation lié aux équipements, leur
+            but désormais était d'éxpedié les équipements dans les salles machine dédiées.
+        </p>
 
     </div>
 
@@ -148,7 +221,19 @@ WASSIM RAJI
 
         <h2>5. Les résultats — pour moi, pour l'entreprise</h2>
 
-       
+       <p>
+            A titre personnel, ce projet a été l'occasion d'approcher ce qu'est concrètement la mise en conformité opérationnelle sur
+            des équipements de sécurité, un sujet que je n'aurais jamais eu l'occasion d'aborder auparavant de part mon profil purement
+            axé développement, au-delà de leur simple configuration j'ai pu constater toutes la partie administrative qui repose derriere,
+            c'est un sujet qui demande beaucoup d'organisation et un certain niveau de maitrise.
+
+        </p>
+
+        <p>
+            Pour l'entreprise, ce projet à résulté au renforcement de son infrastructure réseau, en effet, cela a permis de maintenir à jour
+            un parc d'équipements assez considérable et pourra permettre à l'avenir de répondre convenablement lors de potentiel audit de sécurité internes
+            ou externes.
+        </p>
 
     </div>
 
@@ -160,7 +245,14 @@ WASSIM RAJI
 
         <h2>6. Les lendemains du projet</h2>
 
-       
+       <p>
+
+            A la suite de ce projet, l'ensemble du périmètre qui m'a été donné a été mis à jour, cela va donc étendre la date de validité de ces équipements pour
+            quelques années à suivre, c'est une plus-value temporaire étant donné que la démarche de l'entreprise vis à vis des équipements de sécurité est qu'elle
+            soit reconduite périodiquement afin de s'assurer de la conformité permanente des équipements de sécurité. J'ai pu documenté certaines partie d'étape
+            importante ce qui à l'avenir pourra permettre de servir de référence pour l'équipe. 
+
+        </p>
 
     </div>
 
@@ -172,11 +264,31 @@ WASSIM RAJI
 
         <h2>7. Mon regard critique</h2>
 
-       
+       <p>
+
+            Ce projet m'a appris la rigueur nécessaire pour intervenir sur des équipements de sécurité critiques
+            déjà en production, où chaque changement doit être validé avec précaution avant d'être généralisé.
+            Avec le recul, je pense qu'une automatisation partielle du contrôle de conformité (plutôt qu'un audit
+            entièrement manuel) aurait permis de gagner du temps et de pouvoir répéter cette vérification plus
+            fréquemment à l'avenir.
+
+            Ce projet m'a appris à être rigoureux, une rigueur différente de celle d'un développeur. Ce que je retiens c'est que chaque étape de configuration
+            pour un nombre d'équipemennts donné est extrement chronophage, cela pourrait être intéressant à l'avenir afin de gagner du temps d'étudier si possible
+            un moyen d'automiser certaines étapes dans la mesure du possible afin de gagner du temps, car en effet, ce genre de projet prenne énormement de temps
+            aux experts internes en plus de leur sollicitation qui se font très nombreuses sur d'autres sujet encore plus vaste, trouver un moyen de leur facilité
+            les choses pourrait être intéressant.
+
+        </p>
 
         <h3 style="margin-top:40px;margin-bottom:15px;color:white;">Compétences liées à cette réalisation</h3>
 
-       
+       <div class="realisations-liees">
+            <a href="../competences/administration-securite.html">Administration & sécurité</a>
+            <a href="../competences/autonomie.html">Autonomie</a>
+            <a href="../competences/organisation.html">Organisation</a>
+            <a href="../competences/resolution-problemes.html">Résolution de problèmes</a>
+            <a href="../competences/communication.html">Communication</a>
+        </div>
 
     </div>
 
