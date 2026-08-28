@@ -100,7 +100,20 @@ WASSIM RAJI
 
         <h2>1. Présentation du projet</h2>
 
-        
+        <p>
+
+            Ce projet est un module assez conséquent qui s'inscrit dans le cadre d'automatisation de processus très chronophage, en effet,
+            l'objectif derrière ce projet était de rendre quasi automatique et de donné la main au client tout en limitant l'erreur humaine,
+            sur des actions qui pouvaient prendre parfois une demi journée complète par les membres de notre équipe.
+
+        </p>
+
+        <p>
+            Le but derrière était d'automatiser le déploimement de VIP (Virtual IP) sur des loadbalancers ainsi que sur des WAF (Web Application Firewall), dans le cadre
+            de déploiement d'application de la part des clients internes à l'entreprise, l'objectif cible était de remplacer un process se faisant par le biais d'un fichier
+            Excel et qui était transmis à notre équipe par un formulaire sous forme de stepper en libre service permettant les utilisateurs finaux d'être autonome sur leurs
+            déploiement et de faire gagner du temps à notre équipe afin de pouvoir le consacrer à d'autre sujets.
+        </p>
 
     </div>
 
@@ -112,7 +125,26 @@ WASSIM RAJI
 
         <h2>2. Les objectifs, le contexte, l'enjeu et les risques</h2>
 
-        
+         <p>
+
+            Avant ce projet, chaque demande de déploiement de VIP avec ou sans WAF passait par un fichier Excel, parfois mal renseigné et
+            envoyé à notre équipe qui réalisait les taches de configuration manuellement sur les équipements en question, ce processus étant extremement
+            chronophage tout en dépendant de la disponibilité des personnes concerné apporte une problématique concrète, comment automatiser ce processus afin
+            de gagner en temps et en performance ?
+
+        </p>
+
+        <p>
+
+
+            L'enjeu derrière ce projet était de limiter l'erreur humaine, en effet, il pouvait arriver des moments où lorsqu'une demande via le fichier Excel a
+            été complété, qu'elle ne fonctionne pas, même un expert était capable de se tromper ou bien qu'un client renseigne mal les informations lié au déploiment
+            souhaité, cette problématique implique donc de mettre en place un niveau controle assez élevé prennant en compte plusieurs cas d'usage afin d'éliminer
+            cette obstacle au bon fonctionnement de chaque déploiement. Il a été important de bien étudier le sujet car des risques peuvent voir le jour avec un système
+            mal conçu, en effet, toutes ces règles de controle ont été étudier afin de limiter la casse pour ne pas permettre de déploiement erroné causant des impact
+            sur les équipements de sécurité en question, l'idée derrière est de ne pas trop être permissif est d'allez à l'essentiel voulu.
+
+        </p>
 
     </div>
 
@@ -124,7 +156,41 @@ WASSIM RAJI
 
         <h2>3. Les étapes — ce que j'ai fait</h2>
 
-        
+        <p>
+
+            Faisant parti d'une équipe de développeur ainsi qu'un référent expert en la matière, nous avons dans un premier temps, décidé de partir
+            à zéro et d'oublier le fichier Excel en identifiant précisément quelles informations allaient être nécessaire pour chaque déploiement de VIP et
+            quelles vérifications devraient être mis en place en fonction des impossibilités de déploiement. Une fois cette partie effectué plusieurs tâches de
+            développement en ont découlé et chacun d'entre nous y a été affecté.
+
+        </p>
+
+        <p>
+            J'ai pu travailler sur la plus grosse partie visible du projet, en effet, ayant une certaine appétence pour le développement frontend, j'ai pu développer
+            dans son entiereté le formulaire qui allait être accessible par les utilisateurs finaux, j'ai veillé à respecté les normes de développement inclusif notamment
+            lié à l'accessibilité numérique, certains de nos collaborateurs étant daltoniens il a donc été important de meme étudier la charte de couleur lié au formulaire,
+            j'ai travaillé avec des chefs de projet interne à mon équipe pour avoir des retour lié à mes travaux afin d'avoir un feedback constructif tout en débattant sur
+            certaines idée pour faire valoir la position de notre équipe de développement.
+        </p>
+
+        <p>
+            Je suis aussi intervenu sur des taches de développement backend afin de mettre en place les controles et les différentes intéractions entre l'application et les
+            équipements de sécurité.
+        </p>
+
+        <p>
+            J'ai pu suivre et organiser des réunions de suivi et de démonstration des avancés du projet avec différent membres de l'équipe. Une fois une première version du module
+            finalisée, une phase pilote à été mise en place avec des membres du centre de service de notre équipe afin d'avoir un premier retour d'utilisation avant la mise en production
+            prévue, cela m'a permis de travailler avec eux en étroite collaboration afin de solutionner de potentielles problèmes ou pour me faire part de différent axe d'amélioration.
+        </p>
+
+
+        <p>
+
+            Une fois le module déployer après une démonstration auprès des utilisateurs finaux, j'ai pu mettre en place de la documentation au grand public, faire de la communication et
+            corriger des bugs imprévu et non anticipé lors de la phase pilote avec le centre de service.
+
+        </p>
 
     </div>
 
@@ -136,7 +202,23 @@ WASSIM RAJI
 
         <h2>4. Les acteurs — les interactions</h2>
 
-        
+        <p>
+            Les principaux acteurs de ce projet étaient notre équipe de développement ainsi que le centre de service qui a énormement contribuer durant la phase pilote et
+            avec qui nous avons beaucoup échangé lors de remonté de soucis de déploiement.
+
+        </p>
+
+        <p>
+            Les chefs de projet ont participé activement également, étant donné qu'ils connaissent bien l'environnement d'entreprise et ses différents acteurs, ils étaient les mieux
+            placé pour nous faire des retour concernant l'ergonomie ou bien sur la richesse d'informations dévoilé dans le formulaire, car oui, tout le monde n'est pas très à l'aise
+            techniquement sur des sujets de base, même dans une entreprise axé purement informatique, cela aurait été un frein à l'usage du formulaire et ils ont été là pour nous le faire
+            savoir assez souvent.
+        </p>
+
+        <p>
+            Enfin, les acteurs finaux sont les utilisateurs pour qui le module a conçu, après le déploiement de l'application leurs feedbacks ont été pris en compte pour des amélioration ou
+            pour mettre en place des nouvelles features.
+        </p>
 
     </div>
 
@@ -148,7 +230,22 @@ WASSIM RAJI
 
         <h2>5. Les résultats — pour moi, pour l'entreprise</h2>
 
-        
+        <p>
+
+            Pour moi, ce projet a été l'occasion de mettre à service mes connaissances dans le cadre d'un besoin d'entreprise
+            assez conséquent, cela m'a aussi permis de travailler mon autonomie et de démontrer qu'on peut compter sur moi dans
+            ce genre de projet et que je suis capable d'apporter une vraie plus-value au sein d'une équipe. Cela a aussi été l'occasion
+            de travailler sur des technologies que je n'aurais jamais eu l'opportunité de découvrir, en effet, travailler au sein d'une équipe
+            axé sécurité réseau en tant que développeur permet de découvrir un nouvel univers et de monter en compétences sur un nouveau périmètre
+            tout en réstant épanoui.
+
+        </p>
+
+        <p>
+            Pour l'entreprise, cela a été un véritable succès, les clients internes utilisant le module sont très satisfait et sont désormais autonome sur
+            leur déploiement de VIP et de WAF, ce projet a également été bénéfique pour mon équipe, nous avons obtenu un gain de temps très important et désormais
+            les membres de l'équipe ainsi que le centre de service peuvent consacrer plus de temps sur d'autre sujet important.
+        </p>
 
     </div>
 
@@ -160,6 +257,15 @@ WASSIM RAJI
 
         <h2>6. Les lendemains du projet</h2>
 
+        <p>
+
+            Ce projet a été félicité par la direction et par un grand nombre de collaborateurs interne, il a été encouragé de faire de même au sein de l'entreprise,
+            ce projet peut être considéré comme celui qui a mis un coup de pied dans la fourmilière afin d'inspirer tout le monde à faire pareil. Ce module d'automatisation
+            a susité plein de suggestions afin d'en faire un module encore plus développé et en plus de cela, d'autre projet similaire à celui ci sont en cours de développement
+            au sein de l'équipe. Pour le futur de l'entreprise, ce projet est un véritable vecteur annoncant la trajectoire à suivre dans les années à venir, l'automatisation
+            a de grand jour devant elle.
+
+        </p>
         
     </div>
 
@@ -171,10 +277,32 @@ WASSIM RAJI
 
         <h2>7. Mon regard critique</h2>
 
-        
+        <p>
+
+            Ce projet m'a appris qu'automatiser un processus critique comme celui ne convient pas de seulement y soustraire
+            la partie lié à l'intervention humaine mais surtout à intégrer une chaine de verification
+            la plus fiable qui soit afin d'éviter la casse même de manière applicative, c'est toujours la machine qui a raison,
+            alors ne lui donnons pas la raison de faire n'importe quoi. Avec du recul sur mon travail je pense qu'il aurait été
+            intéressant d'intégrer quelques clients internes finaux lors de la phase pilote afin d'avoir un oeil différent sur
+            le travail réalisé, peut être que cela aurait pu changer les choses sur certains soucis rencontrer en cours de route,
+            un profil moins technique sur le sujet est parfois très important lors de phase de test, c'est ce que j'ai appris au cours
+            de ce projet.
+
+        </p>
 
         <h3 style="margin-top:40px;margin-bottom:15px;color:white;">Compétences liées à cette réalisation</h3>
 
+        <div class="realisations-liees">
+            <a href="../competences/automatisation.html">Automatisation</a>
+            <a href="../competences/conception-developpement.html">Conception et développement</a>
+            <a href="../competences/base-de-donnees.html">Base de données</a>
+            <a href="../competences/administration-securite.html">Sécurité</a>
+            <a href="../competences/autonomie.html">Autonomie</a>
+            <a href="../competences/organisation.html">Organisation</a>
+            <a href="../competences/resolution-problemes.html">Résolution de problèmes</a>
+            <a href="../competences/travail-equipe.html">Travail en équipe</a>
+            <a href="../competences/communication.html">Communication</a>
+        </div>
        
     </div>
 
